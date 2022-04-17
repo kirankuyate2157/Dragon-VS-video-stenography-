@@ -106,7 +106,7 @@ public class VideoSteganography extends JFrame {
 		setBounds(0, 100, 1500, 1700);
 	
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(25,147,240));
+		contentPane.setBackground(new Color(25,14,40));//25,147,240  85, 180, 176
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -120,12 +120,12 @@ public class VideoSteganography extends JFrame {
 		
 		textField = new JTextField();
 		textField.setToolTipText("Opened filename");
-		textField.setBounds(470, 165, 150, 28); //48
+		textField.setBounds(470, 165, 250, 28); //48
 		contentPane.add(textField);
 		textField.setColumns(10);
 
 		btnData = new JButton("Data");
-		btnData.setBackground(new Color(13,59,102));
+		btnData.setBackground(new Color(13,59,102));//13,59,102
 		btnData.setForeground(Color.WHITE);
 		btnData.setOpaque(true);
 		
@@ -283,57 +283,50 @@ public class VideoSteganography extends JFrame {
 		label.setFont(new Font("Arial", Font.BOLD, 26));
 		label.setBounds(74, 40, 1500, 78);
 		contentPane.add(label);
-		
-		lblNewLabel = new JLabel("Group Members:");
+		int x=631;
+		lblNewLabel = new JLabel("Group Members :");
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblNewLabel.setBounds(531, 506, 200, 28);
+		lblNewLabel.setBounds(471, x, 200, 28);
 		contentPane.add(lblNewLabel);
 		
 	
-		
-		
-		lblNewLabel_1 = new JLabel("1. Miss. Monali Borse( Project Leader )");
+		lblNewLabel_1 = new JLabel("1. Miss.snehal kad ");
 		lblNewLabel_1.setForeground(new Color(255, 255, 255));
 
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewLabel_1.setBounds(623, 531, 500, 28);
+		lblNewLabel_1.setBounds(623, x, 500, 28);
 		contentPane.add(lblNewLabel_1);
 		
-		lblNewLabel_2 = new JLabel("	2. Miss. Anushka Bhagwat");
+		lblNewLabel_2 = new JLabel("2. Mr.Kiran Kuyate");
 		lblNewLabel_2.setForeground(new Color(255, 255, 255));
 
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewLabel_2.setBounds(623, 562, 500, 28);
+		lblNewLabel_2.setBounds(623, x+=31, 500, 28);
 		contentPane.add(lblNewLabel_2);
 		
-		lblNewLabel_3 = new JLabel("3. Miss. Snehal Kad");
+		lblNewLabel_3 = new JLabel("3. Mr.Prathamesh Jadhav");
 		lblNewLabel_3.setForeground(new Color(255, 255, 255));
 
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewLabel_3.setBounds(623, 593, 500, 28);
+		lblNewLabel_3.setBounds(623, x+=31, 500, 28);
 		contentPane.add(lblNewLabel_3);
 		
-		lblNewLabel_4 = new JLabel("4. Miss. Aarti Kale");
+		lblNewLabel_4 = new JLabel("4. Miss.Madhuri Purker");
 		lblNewLabel_4.setForeground(new Color(255, 255, 255));
 
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewLabel_4.setBounds(623, 624, 500, 28);
+		lblNewLabel_4.setBounds(623, x+=31, 500, 28);
 		contentPane.add(lblNewLabel_4);
 		
-		lblNewLabel_5 = new JLabel("Project Guide -");
+		
+		
+		lblNewLabel_5 = new JLabel("5. Miss.snehal Sayker");
 		lblNewLabel_5.setForeground(new Color(255, 255, 255));
 
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblNewLabel_5.setBounds(531, 655, 143, 28);
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 18)); 
+		lblNewLabel_5.setBounds(623, x+=31, 500, 28);
 		contentPane.add(lblNewLabel_5);
-		
-		lblNewLabel_6 = new JLabel("Prof. R.Y. Thombare");
-		lblNewLabel_6.setForeground(new Color(255, 255, 255));
-
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblNewLabel_6.setBounds(635, 686, 500, 47);
-		contentPane.add(lblNewLabel_6);
 	}
 	 static void fileProcessor(int cipherMode,String key,File inputFile,File outputFile){
 			{
