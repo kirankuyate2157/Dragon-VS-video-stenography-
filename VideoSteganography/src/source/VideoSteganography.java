@@ -1,5 +1,5 @@
 package source;
-
+import java.awt.Dimension;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
@@ -110,17 +110,24 @@ public class VideoSteganography extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
+
+		setBackground(Color.red);
+
+		int xEnd=350;
+		int xStart=400;
+		int yEnd=28;
+		int yStart=150;
 		//label input
 		JLabel input_txt_file_lbl= new JLabel("Select Text File");
 		input_txt_file_lbl.setForeground(new Color(255, 255, 255));
 		input_txt_file_lbl.setFont(new Font("Tahoma", Font.BOLD, 14));
-		input_txt_file_lbl.setBounds(470, 135, 150, 28);
+		input_txt_file_lbl.setBounds(xStart, yStart-30, xEnd, yEnd);
 		contentPane.add(input_txt_file_lbl);
 		
 		textField = new JTextField();
 		textField.setToolTipText("Opened filename");
-		textField.setBounds(470, 165, 250, 28); //48
+		textField.setBounds(xStart, yStart, xEnd, yEnd); //48
 		contentPane.add(textField);
 		textField.setColumns(10);
 
@@ -149,14 +156,9 @@ public class VideoSteganography extends JFrame {
 			     System.out.println(ex.getMessage());
 		             ex.printStackTrace();
 			 }	
-			
-		
-
-			
-
 			}
 		});
-		btnData.setBounds(500, 219, 89, 37); //48
+		btnData.setBounds(xEnd+450, yStart, 89, 30); //48
 		contentPane.add(btnData);
 
 		btnVideoFile = new JButton("Video file");
@@ -168,7 +170,8 @@ public class VideoSteganography extends JFrame {
 				
 			}
 		});
-		btnVideoFile.setBounds(681, 219, 89, 37); //217
+
+		btnVideoFile.setBounds(xEnd+450, yStart+60, 89, 30); //217 xStart, yStart+60, xEnd, yEnd
 		btnVideoFile.setBackground(new Color(13,59,102));
 		btnVideoFile.setForeground(Color.WHITE);
 		btnVideoFile.setOpaque(true);
@@ -179,14 +182,20 @@ public class VideoSteganography extends JFrame {
 				JLabel input_vdo_file_lbl= new JLabel("Select Video File");
 				input_vdo_file_lbl.setForeground(new Color(255, 255, 255));
 				input_vdo_file_lbl.setFont(new Font("Tahoma", Font.BOLD, 14));
-				input_vdo_file_lbl.setBounds(650, 135, 150, 28);
+				input_vdo_file_lbl.setBounds(xStart, yStart+30, xEnd, yEnd);
 				contentPane.add(input_vdo_file_lbl);
 				
+
 		textField_1 = new JTextField();
 		textField_1.setToolTipText("Opened filename\r\n");
 		textField_1.setColumns(10);
-		textField_1.setBounds(650, 165, 150, 28); //220
+		textField_1.setBounds(xStart, yStart+60, xEnd, yEnd); //220
 		contentPane.add(textField_1);
+
+        int xStart2=415;
+		int xEnd2=180;
+		int yStart2=314;
+		int yEnd2=70;
 
 		btnEncrypt = new JButton("Encrypt");
 		btnEncrypt.setBackground(new Color(13,59,102));
@@ -207,7 +216,7 @@ public class VideoSteganography extends JFrame {
 			}
 		});
 		btnEncrypt.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnEncrypt.setBounds(552, 316, 193, 78); //87
+		btnEncrypt.setBounds(xStart2+270,yStart2,xEnd2,yEnd2); //87
 		contentPane.add(btnEncrypt);
 
 		btnDecrypt = new JButton("Decrypt");
@@ -223,7 +232,7 @@ public class VideoSteganography extends JFrame {
 			}
 		});
 		btnDecrypt.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnDecrypt.setBounds(552, 407, 194, 78); //87
+		btnDecrypt.setBounds(xStart2,yStart2,xEnd2,yEnd2); //87
 		contentPane.add(btnDecrypt);
 		//for logout
 
