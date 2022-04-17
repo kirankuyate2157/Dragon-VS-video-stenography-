@@ -103,21 +103,46 @@ public class VideoSteganography extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VideoSteganography.class.getResource("/source/hackerb.jpg")));
 		setTitle("Securing Confidential Data Over Public Channel using Video Steganography using AES");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 100, 1500, 1700);
+		setBounds(10, 400, 1400, 1700); //30, 100, 1500, 1700
 	
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(25,14,40));//25,147,240  85, 180, 176
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
-
-		setBackground(Color.red);
+ 
+		;
 
 		int xEnd=350;
 		int xStart=400;
 		int yEnd=28;
-		int yStart=150;
+		int yStart=240;
+		int pass=480;
+
+		JLabel second_line= new JLabel("Existing system were developed by keeping an eye over the following technologies:I.Plain Video Steganograph.II.Water marketing Technique.III.Video Steganography with password.But the problems with above techniques is that the users data can begets in hand to");
+		second_line.setForeground(new Color(255, 255, 255));
+		second_line.setFont(new Font("Tahoma", Font.BOLD, 10));
+		second_line.setBounds(15, pass+300, 1370, yEnd);
+		contentPane.add(second_line);
+
+		JLabel third_txt_file_lbl= new JLabel("attackers which could be dangerous.Hence the proposed system comes in picture.Achieve secure communication.This method featured security, capacity, and robustness.The use of Steganography Corporation government and law enforcement agencies can");
+		third_txt_file_lbl.setForeground(new Color(255, 255, 255));
+		third_txt_file_lbl.setFont(new Font("Tahoma", Font.BOLD, 10));
+		third_txt_file_lbl.setBounds(15, pass+310, 1370, yEnd);
+		contentPane.add(third_txt_file_lbl);
+
+		JLabel forth_txt_file_lbl= new JLabel("communicate secretly.Supports for hiding multiple text files behind a video.Applications : • Military application Industrial application Provide Protection of sensitive data. • Confidential communication and secret data. • Scientist use this technique to hide secret formula.• Protection against data alteration.");
+		forth_txt_file_lbl.setForeground(new Color(255, 255, 255));
+		forth_txt_file_lbl.setFont(new Font("Tahoma", Font.BOLD, 10));
+		forth_txt_file_lbl.setBounds(15, pass+320, 1370, yEnd);
+		contentPane.add(forth_txt_file_lbl);
+
+		JLabel fifth_txt_file_lbl= new JLabel("secret formula. Protection against data alteration. Limitations • Huge number of data, huge file size. So someone Can suspect about it.• Large the Size of video- larger it takes to upload and download • Current version Supported mainly focusing on mpu files.");
+		fifth_txt_file_lbl.setForeground(new Color(255, 255, 255));
+		fifth_txt_file_lbl.setFont(new Font("Tahoma", Font.BOLD, 10));
+		fifth_txt_file_lbl.setBounds(15, pass+330, 1370, yEnd);
+		contentPane.add(fifth_txt_file_lbl);
+
 		//label input
 		JLabel input_txt_file_lbl= new JLabel("Select Text File");
 		input_txt_file_lbl.setForeground(new Color(255, 255, 255));
@@ -194,7 +219,7 @@ public class VideoSteganography extends JFrame {
 
         int xStart2=415;
 		int xEnd2=180;
-		int yStart2=314;
+		int yStart2=384;
 		int yEnd2=70;
 
 		btnEncrypt = new JButton("Encrypt");
@@ -281,16 +306,38 @@ public class VideoSteganography extends JFrame {
 		btnNewButton.setOpaque(true);
 		
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnNewButton.setBounds(1100, 13, 150, 30); //87
+		btnNewButton.setBounds(xStart2+50,yStart2+100,350,30); //87
 		contentPane.add(btnNewButton);
 		
 		//for log out
+		int Hp=200;
+		JLabel brandHero = new JLabel(" Dragon VS");
+        brandHero.setForeground(Color.white);
+        brandHero.setBackground(new Color(64, 0, 128));
+        brandHero.setFont(new Font("Tahoma", Font.BOLD, 35));
+        brandHero.setBounds(Hp+400, 0, 200, 43);
+        brandHero.setOpaque(true);
+        contentPane.add(brandHero);
+
+        JLabel brandLine = new JLabel("Securing Confidential comunication and data transmission");//Securing Confidential Data Over Public Channel using Video Steganography using AES
+		brandLine.setForeground(new Color(255, 255, 255));
+		brandLine.setFont(new Font("Arial", Font.BOLD, 13));
+		brandLine.setBounds(Hp+310, 16, 1500, 78);
+		contentPane.add(brandLine);
 		
-		
+		JLabel BGPg = new JLabel();
+        BGPg.setForeground(Color.white);
+        BGPg.setBackground(new Color(20, 0, 51));
+        BGPg.setFont(new Font("Tahoma", Font.BOLD, 35));
+        BGPg.setBounds(200, 170, 900, 403);
+        BGPg.setOpaque(true);
+        contentPane.add(BGPg);
+
+		// setBackground(Color.red)
 		JLabel label = new JLabel("Securing Confidential Data Over Public Channel using Video Steganography using AES");
 		label.setForeground(new Color(255, 255, 255));
 		label.setFont(new Font("Arial", Font.BOLD, 26));
-		label.setBounds(74, 40, 1500, 78);
+		label.setBounds(74, 100, 1500, 78);
 		contentPane.add(label);
 		int x=631;
 		lblNewLabel = new JLabel("Group Members :");
@@ -496,3 +543,7 @@ public void unzipFiles() {
 
     }
 }
+
+
+
+
