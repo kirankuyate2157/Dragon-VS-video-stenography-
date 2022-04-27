@@ -300,7 +300,7 @@ public class VideoSteganography extends JFrame {
 
 	            }
 	        });
-	       
+	    //graphics interface 
 		btnNewButton.setBackground(new Color(13,59,102));
 		btnNewButton.setForeground(Color.red);
 		btnNewButton.setOpaque(true);
@@ -421,18 +421,10 @@ public class VideoSteganography extends JFrame {
 		    File selectedFile = fileChooser.getSelectedFile();
 		    file1 = selectedFile.getName();
 		    return selectedFile.getAbsolutePath();
-		    
-		    
 		    //file encrypt
-		    
-	
-		   	
 		}
 		return null;
 	}
-
-
-
 
 	//start of zipfile method
 	public void zipFiles(String Text,String Video) {
@@ -449,26 +441,19 @@ public class VideoSteganography extends JFrame {
             byte[] buffer = new byte[1024];
 
             FileOutputStream fos = new FileOutputStream(zipFile);
-
             ZipOutputStream zos = new ZipOutputStream(fos);
 
             for (int i=0; i < srcFiles.length; i++) {
-
                 File srcFile = new File(srcFiles[i]);
-
                 FileInputStream fis = new FileInputStream(srcFile);
 
                 // begin writing a new ZIP entry, positions the stream to the start of the entry data
                 zos.putNextEntry(new ZipEntry(srcFile.getName()));
-
-                int length;
-
+				int length;
                 while ((length = fis.read(buffer)) > 0) {
                     zos.write(buffer, 0, length);
                 }
-
                 zos.closeEntry();
-
                 // close the InputStream
                 fis.close();
 
@@ -488,6 +473,7 @@ public class VideoSteganography extends JFrame {
 //end of zip file
 
 //start of unzipfile
+
 public void unzipFiles() {
 
 	JFileChooser fileChooser = new JFileChooser();
@@ -519,8 +505,6 @@ public void unzipFiles() {
             while(ze != null){
                 String fileName = ze.getName();
                 File newFile = new File(destDir + File.separator + fileName);
-                //System.out.println("Unzipping to "+newFile.getAbsolutePath());
-                //create directories for sub directories in zip
                 new File(newFile.getParent()).mkdirs();
                 FileOutputStream fos = new FileOutputStream(newFile);
                 int len;
@@ -537,7 +521,6 @@ public void unzipFiles() {
             zis.close();
             fis.close();
         } catch (IOException e) {
-        	///System.out.println(textfile);
             e.printStackTrace();
         }
 
