@@ -26,8 +26,8 @@ public class UserLogin extends JFrame {
     private JLabel label;
     private JPanel contentPane;
 
-    /**
-     * Launch the application.
+    /*
+      ------  Launch the application.----------------
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -54,7 +54,7 @@ public class UserLogin extends JFrame {
     }
 
     /**
-     * Create the frame.
+        -----------  Create the frame. -----------------
      */
     public UserLogin() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -110,12 +110,12 @@ public class UserLogin extends JFrame {
         brandHero.setOpaque(true);
         contentPane.add(brandHero);
 
-        JLabel label = new JLabel("Securing Confidential comunication and data transmission");//Securing Confidential Data Over Public Channel using Video Steganography using AES
+        JLabel label = new JLabel("Securing Confidential comunication and data transmission");
 		label.setForeground(new Color(255, 255, 255));
 		label.setFont(new Font("Arial", Font.BOLD, 13));
 		label.setBounds(310, 16, 1500, 78);
 		contentPane.add(label);
-		
+		//    ------ / end contents ------- 
         JLabel lblNewLabel = new JLabel("User Login");
         lblNewLabel.setForeground(Color.white);
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 35));
@@ -163,7 +163,7 @@ public class UserLogin extends JFrame {
                 String userName = textField.getText();
                 String password = passwordField.getText();
             
-                    if ((userName.equals(u) && password.equals(p)) || (userName.equals("kiran")&&password.equals("12345"))||(userName.equals("dragon")&&password.equals("dragon"))) {
+                    if ((userName.equals(u) && password.equals(p)) || (userName.equals("kiran")&&password.equals("12345"))||(userName.equals("dragon")&&password.equals("dragon123"))) {
                         
                         JOptionPane.showMessageDialog(btnNewButton, "You have successfully logged in");
                         dispose();

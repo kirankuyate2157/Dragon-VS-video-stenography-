@@ -259,25 +259,11 @@ public class VideoSteganography extends JFrame {
 		btnDecrypt.setFont(new Font("Tahoma", Font.BOLD, 16));
 		btnDecrypt.setBounds(xStart2,yStart2,xEnd2,yEnd2); //87
 		contentPane.add(btnDecrypt);
-		//for logout
-
+		// ------ for logout -----------
 		JButton btnNewButton = new JButton("Logout");
 	       btnNewButton.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
 	                int a = JOptionPane.showConfirmDialog(btnNewButton, "Are you sure?");
-	            /*     JOptionPane.setRootFrame(null);
-	                if (a == JOptionPane.YES_OPTION) {
-	                    dispose();
-	                   UserLogin obj = new UserLogin();
-	                    obj.setTitle("Securing Confidential Data Over Public Channel using Video Steganography using AES");
-	                   obj.setVisible(true);
-	                }
-	                else if(a == JOptionPane.YES_OPTION)
-	               dispose();*/
-	            	
-	                //UserLogin obj = new UserLogin();
-
-	                //obj.setTitle("Securing Confidential Data Over Public Channel using Video Steganography using AES");
 	                //obj.setVisible(true);
 	                if(a == JOptionPane.YES_OPTION) {
 	                	 dispose();
@@ -287,11 +273,7 @@ public class VideoSteganography extends JFrame {
 		                obj.setVisible(true);
 		                obj.setLocationRelativeTo(null);
 	                    obj.setVisible(true);
-					      
-	                	
 	                	//System.exit(0);
-	                	
-	                
 	                }
 	                else
 	                {
@@ -319,7 +301,7 @@ public class VideoSteganography extends JFrame {
         brandHero.setOpaque(true);
         contentPane.add(brandHero);
 
-        JLabel brandLine = new JLabel("Securing Confidential comunication and data transmission");//Securing Confidential Data Over Public Channel using Video Steganography using AES
+        JLabel brandLine = new JLabel("Securing Confidential comunication and data transmission");
 		brandLine.setForeground(new Color(255, 255, 255));
 		brandLine.setFont(new Font("Arial", Font.BOLD, 13));
 		brandLine.setBounds(Hp+310, 16, 1500, 78);
@@ -408,10 +390,9 @@ public class VideoSteganography extends JFrame {
 				             | IllegalBlockSizeException | IOException e) {
 					e.printStackTrace();
 			            }
-				 finally {
-					 }
-				 }
-			     }
+				//  finally {}
+			 }
+		}
 	//method to select file
 	String selectFile(){
 		JFileChooser fileChooser = new JFileChooser();
@@ -426,7 +407,7 @@ public class VideoSteganography extends JFrame {
 		return null;
 	}
 
-	//start of zipfile method
+	// --------- start of zip file method --------------------------
 	public void zipFiles(String Text,String Video) {
 
 
@@ -470,9 +451,9 @@ public class VideoSteganography extends JFrame {
 
     }
 
-//end of zip file
+// -------- /end of zip file ----------------
 
-//start of unzipfile
+//start of unzip file
 
 public void unzipFiles() {
 
